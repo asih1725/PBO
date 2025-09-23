@@ -7,17 +7,18 @@
  *
  * @author ASUS
  */
-public class Hewan {
+public class Kendaraan {
     String nama;
-    String jenis;
+    int kecepatan;
 
-    public Hewan(String nama, String jenis) {
+    public Kendaraan(String nama, int kecepatan) {
         this.nama = nama;
-        this.jenis = jenis;
+        this.kecepatan = kecepatan;
     }
 
     public void tampilkanInfo() {
-        System.out.println("Nama Hewan : " + nama);
-        System.out.println("Jenis      : " + jenis);
+        System.out.println("Nama Kendaraan : " + nama);
+        System.out.println("Kecepatan      : " + kecepatan + " km/jam");
     }
 }
+

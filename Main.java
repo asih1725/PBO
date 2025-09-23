@@ -2,7 +2,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package prak3;
 
 /**
  *
@@ -10,21 +9,15 @@ package prak3;
  */
 public class Main {
     public static void main(String[] args) {
-        // Membuat objek pekerja
-        Pekerja p1 = new Pekerja("Andi", 25, "Programmer", 7000000);
+        Kucing kucing = new Kucing("Kitty");
+        Anjing anjing = new Anjing("Buddy");
 
-        // Tampilkan data dengan toString()
-        System.out.println(p1.toString());
+        kucing.tampilkanInfo(); // Memanggil versi override
+        kucing.suara();         // Memanggil metode khusus kucing
+        System.out.println();
 
-        // Ubah nama pekerja dengan setter
-        p1.setNama("Budi");
-        System.out.println("Setelah nama diubah:");
-        System.out.println(p1.toString());
-
-        // Coba akses langsung atribut
-        // System.out.println(p1.nama);       // ERROR → karena nama private
-        System.out.println(p1.usia);          // Bisa diakses (protected) karena di subclass/main dalam package sama
-        System.out.println(p1.pekerjaan);     // Bisa diakses (public)
-        // System.out.println(p1.gaji);      // ERROR → karena gaji private
+        anjing.tampilkanInfo(); // Memanggil versi override
+        anjing.suara();         // Memanggil metode khusus anjing
     }
 }
+

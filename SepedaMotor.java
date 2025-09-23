@@ -7,19 +7,19 @@
  *
  * @author ASUS
  */
-public class Mobil extends KendaraanDarat {
-    int jumlahPintu;
+public class SepedaMotor extends KendaraanDarat {
+    String jenisMesin;
 
-    public Mobil(String nama, int kecepatan, int jumlahRoda, int jumlahPintu) {
+    public SepedaMotor(String nama, int kecepatan, int jumlahRoda, String jenisMesin) {
         super(nama, kecepatan, jumlahRoda);
-        this.jumlahPintu = jumlahPintu;
+        this.jenisMesin = jenisMesin;
     }
 
     @Override
     public void tampilkanInfo() {
-        System.out.println("=== Informasi Mobil ===");
+        System.out.println("=== Informasi Sepeda Motor ===");
         super.tampilkanInfo();
-        System.out.println("Jumlah Pintu   : " + jumlahPintu);
+        System.out.println("Jenis Mesin   : " + jenisMesin);
     }
 }
 
