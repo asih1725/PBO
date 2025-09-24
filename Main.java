@@ -9,15 +9,13 @@
  */
 public class Main {
     public static void main(String[] args) {
-        Kucing kucing = new Kucing("Kitty");
-        Anjing anjing = new Anjing("Buddy");
+        KeranjangBelanja keranjang = new KeranjangBelanja();
 
-        kucing.tampilkanInfo(); // Memanggil versi override
-        kucing.suara();         // Memanggil metode khusus kucing
-        System.out.println();
+        keranjang.tambahProduk(new Buku("Buku Java", 100000));
+        keranjang.tambahProduk(new Elektronik("Headphone", 500000));
+        keranjang.tambahProduk(new Pakaian("Kaos", 150000));
 
-        anjing.tampilkanInfo(); // Memanggil versi override
-        anjing.suara();         // Memanggil metode khusus anjing
+        System.out.println("Total harga setelah diskon: " + keranjang.totalHargaSetelahDiskon());
     }
 }
 

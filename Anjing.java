@@ -7,21 +7,9 @@
  *
  * @author ASUS
  */
-public class Anjing extends Hewan {
-
-    public Anjing(String nama) {
-        super(nama, "Anjing");
-    }
-
-    // Overriding metode tampilkanInfo()
+class Anjing extends Hewan {
     @Override
-    public void tampilkanInfo() {
-        System.out.println("=== Informasi Anjing ===");
-        super.tampilkanInfo();  // memanggil metode induk
-    }
-
-    // Metode khusus suara
-    public void suara() {
-        System.out.println(nama + " bersuara: Guk Guk!");
+    public void bersuara() {
+        System.out.println("Woof");
     }
 }

@@ -7,10 +7,15 @@
  *
  * @author ASUS
  */
-class Kucing extends Hewan {
+class Buku extends Produk {
+    public Buku(String nama, double harga) {
+        super(nama, harga);
+    }
+
     @Override
-    public void bersuara() {
-        System.out.println("Meow");
+    public double hitungDiskon() {
+        return harga * 0.1; // Diskon 10%
     }
 }
+
 

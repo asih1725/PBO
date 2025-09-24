@@ -7,17 +7,17 @@
  *
  * @author ASUS
  */
-public class Hewan {
-    String nama;
-    String jenis;
-
-    public Hewan(String nama, String jenis) {
-        this.nama = nama;
-        this.jenis = jenis;
+class Hewan {
+    public void bersuara() {
+        System.out.println("Hewan bersuara");
     }
 
-    public void tampilkanInfo() {
-        System.out.println("Nama Hewan : " + nama);
-        System.out.println("Jenis      : " + jenis);
+    public void makan(String makanan) {
+        System.out.println("Hewan makan " + makanan);
+    }
+
+    public void makan(String makanan, int jumlah) {
+        System.out.println("Hewan makan " + jumlah + " porsi " + makanan);
     }
 }
+
