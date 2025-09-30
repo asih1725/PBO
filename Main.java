@@ -9,13 +9,25 @@
  */
 public class Main {
     public static void main(String[] args) {
-        KeranjangBelanja keranjang = new KeranjangBelanja();
+        // Objek Produk
+        Elektronik laptop = new Elektronik("Laptop", 15000000, 2);
+        Makanan snack = new Makanan("Snack", 15000, "2023-12-30");
 
-        keranjang.tambahProduk(new Buku("Buku Java", 100000));
-        keranjang.tambahProduk(new Elektronik("Headphone", 500000));
-        keranjang.tambahProduk(new Pakaian("Kaos", 150000));
+        // Objek Pegawai
+        PegawaiTetap budi = new PegawaiTetap("Budi", 5000000, 1000000);
+        PegawaiKontrak andi = new PegawaiKontrak("Andi", 3000000, 12);
 
-        System.out.println("Total harga setelah diskon: " + keranjang.totalHargaSetelahDiskon());
+        System.out.println("=== Output Produk ===");
+        laptop.tampilkanInfo();
+
+        System.out.println("\n=== Output Pegawai ===");
+        budi.tampilkanInfo();
+
+        System.out.println("\n=== Output Polimorfisme ===");
+        Produk p = snack;   // referensi induk
+        p.tampilkanInfo();
+        System.out.println();
+        Pegawai pg = andi;  // referensi induk
+        pg.tampilkanInfo();
     }
 }
-

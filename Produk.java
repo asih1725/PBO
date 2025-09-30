@@ -7,27 +7,33 @@
  *
  * @author ASUS
  */
-abstract class Produk {
-    protected String nama;
-    protected double harga;
+public class Produk {
+    private String namaProduk;
+    private double harga;
 
-    public Produk(String nama, double harga) {
-        this.nama = nama;
+    public Produk(String namaProduk, double harga) {
+        this.namaProduk = namaProduk;
         this.harga = harga;
     }
 
-    // Metode abstrak untuk menghitung diskon
-    public abstract double hitungDiskon();
-
-    public double hargaSetelahDiskon() {
-        return harga - hitungDiskon();
+    public String getNamaProduk() { 
+        return namaProduk; 
     }
 
-    public String getNama() {
-        return nama;
+    public void setNamaProduk(String namaProduk) { 
+        this.namaProduk = namaProduk; 
     }
 
-    public double getHarga() {
-        return harga;
+    public double getHarga() { 
+        return harga; 
+    }
+
+    public void setHarga(double harga) { 
+        this.harga = harga; 
+    }
+
+    public void tampilkanInfo() {
+        System.out.println("Nama Produk: " + namaProduk);
+        System.out.printf("Harga: %.0f%n", harga); 
     }
 }
