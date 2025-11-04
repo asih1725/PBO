@@ -8,9 +8,9 @@ package praktikum9;
  *
  * @author acer
  */
-class Mobil extends Kendaraan {
+class Sepeda extends Kendaraan {
     @Override
     void berjalan() {
-        System.out.println("Mobil sedang berjalan dengan cepat.");
+        System.out.println("Sepeda sedang berjalan dengan pelan.");
     }
 }
